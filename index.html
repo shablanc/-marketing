@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EX HEAL · 시장 경쟁 분석 보고서</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --pastel-pink: #fce4ec;
+  --pastel-mint: #e0f7ee;
+  --pastel-lavender: #ede8f8;
+  --pastel-peach: #fdeee6;
+  --pastel-blue: #e3f0fd;
+  --pastel-yellow: #fef8e1;
+  --accent-pink: #e87aaa;
+  --accent-mint: #52b896;
+  --accent-lavender: #9070cc;
+  --accent-peach: #e8906a;
+  --accent-blue: #60a0e0;
+  --white: #ffffff;
+  --text-dark: #2d2d3a;
+  --text-mid: #6b6b80;
+  --text-light: #a8a8bc;
+  --red-soft: #e87aaa;
+  --red-bg: #fce4ec;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #ffffff;
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+/* ── HEADER ── */
+header {
+  background: linear-gradient(135deg, #fde8f2 0%, #eee8fc 50%, #e2f7f0 100%);
+  color: var(--text-dark);
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #f0e4f4;
+}
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 40px 50px;
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 40px;
+  align-items: center;
+}
+.header-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-lavender);
+  margin-bottom: 16px;
+}
+header h1 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 16px;
+  color: var(--text-dark);
+}
+header h1 em {
+  color: var(--accent-pink);
+  font-style: normal;
+}
+.header-sub {
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.8;
+}
+.header-meta {
+  display: flex;
+  gap: 8px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+.meta-tag {
+  font-size: 11px;
+  padding: 5px 14px;
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(144,112,204,0.3);
+  color: var(--accent-lavender);
+  border-radius: 100px;
+  letter-spacing: 0.05em;
+}
+.header-visual {
+  position: relative;
+  height: 260px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #fce4ec, #ede8f8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid rgba(232,122,170,0.25);
+}
+.header-visual-placeholder {
+  text-align: center;
+  color: rgba(232,122,170,0.5);
+}
+.header-visual-placeholder .icon-box {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+.header-visual-placeholder p {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+.header-visual img {
+  width: 100%; height: 100%; object-fit: cover;
+  opacity: 0.9;
+}
+.upload-hint {
+  position: absolute;
+  bottom: 10px; right: 10px;
+  font-size: 10px;
+  background: rgba(255,255,255,0.8);
+  color: var(--text-mid);
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+.header-deco {
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  border: 1px solid rgba(232,122,170,0.15);
+  pointer-events: none;
+}
+.header-deco2 {
+  position: absolute;
+  bottom: -80px; left: 30%;
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  border: 1px solid rgba(144,112,204,0.12);
+  pointer-events: none;
+}
+
+/* ── MARKET BANNER ── */
+.market-banner {
+  background: var(--pastel-yellow);
+  border-top: 2px solid #f0d86a;
+}
+.market-banner-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.market-stat {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+.market-stat .num {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #8a6e10;
+}
+.market-stat .label {
+  font-size: 12px;
+  color: #9a8040;
+}
+.market-divider {
+  width: 1px;
+  height: 30px;
+  background: rgba(200,160,40,0.3);
+}
+.market-note-text {
+  font-size: 12px;
+  color: #8a7840;
+  flex: 1;
+  min-width: 200px;
+}
+
+/* ── SECTION COMMON ── */
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+.section-header {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 36px;
+  border-bottom: 1.5px solid #f0e4f6;
+  padding-bottom: 16px;
+}
+.section-num {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 40px;
+  font-weight: 300;
+  color: rgba(144,112,204,0.22);
+  line-height: 1;
+}
+.section-title-block {}
+.section-eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-lavender);
+  margin-bottom: 4px;
+}
+.section-title {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* ── COMPETITOR CARDS ── */
+.comp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.comp-card {
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1.5px solid #f0e8f8;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.comp-card:hover {
+  box-shadow: 0 8px 32px rgba(144,112,204,0.14);
+  transform: translateY(-2px);
+}
+.comp-img {
+  width: 100%;
+  height: 160px;
+  background: var(--pastel-mint);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.comp-img img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+.comp-img-placeholder {
+  text-align: center;
+  color: var(--accent-mint);
+}
+.comp-img-placeholder .picon { font-size: 32px; margin-bottom: 6px; }
+.comp-img-placeholder p { font-size: 11px; color: var(--text-light); }
+.comp-img-badge {
+  position: absolute;
+  top: 10px; left: 10px;
+  font-size: 10px;
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+.badge-pdrn { background: #ddeeff; color: #306098; }
+.badge-exo { background: #d4f5e8; color: #1a6848; }
+.badge-both { background: #ede8ff; color: #6050b0; }
+.comp-body { padding: 20px; }
+.comp-name {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+.comp-product-line {
+  font-size: 12px;
+  color: var(--text-light);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+.weak-title {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-peach);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.weak-title::before {
+  content: '';
+  display: block;
+  width: 16px; height: 1px;
+  background: var(--red-soft);
+}
+.weak-list { list-style: none; }
+.weak-list li {
+  font-size: 12.5px;
+  color: var(--text-mid);
+  padding: 5px 0 5px 14px;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+  position: relative;
+  line-height: 1.5;
+}
+.weak-list li::before {
+  content: '·';
+  position: absolute;
+  left: 2px;
+  color: var(--red-soft);
+}
+
+/* ── GAP SECTION ── */
+.gap-section { background: var(--pastel-lavender); }
+.gap-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+.gap-header {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 36px;
+  border-bottom: 1.5px solid rgba(144,112,204,0.2);
+  padding-bottom: 16px;
+}
+.gap-num {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 40px;
+  font-weight: 300;
+  color: rgba(144,112,204,0.2);
+  line-height: 1;
+}
+.gap-eyebrow { color: var(--accent-lavender); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 4px; }
+.gap-title { font-family: 'Noto Serif KR', serif; font-size: 22px; color: var(--text-dark); font-weight: 600; }
+.gap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.gap-card {
+  background: rgba(255,255,255,0.7);
+  border: 1.5px solid rgba(144,112,204,0.18);
+  border-radius: 18px;
+  padding: 22px;
+}
+.gap-card-icon { font-size: 22px; margin-bottom: 12px; }
+.gap-card-title { font-size: 14px; font-weight: 500; color: var(--accent-lavender); margin-bottom: 10px; }
+.gap-card ul { list-style: none; }
+.gap-card ul li {
+  font-size: 12px;
+  color: var(--text-mid);
+  padding: 4px 0 4px 12px;
+  border-bottom: 1px solid rgba(144,112,204,0.08);
+  position: relative;
+  line-height: 1.5;
+}
+.gap-card ul li::before { content: '—'; position: absolute; left: 0; color: rgba(144,112,204,0.45); }
+
+/* ── STRENGTHS ── */
+.strength-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.strength-card {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: 0;
+  background: var(--white);
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1.5px solid #f0e8f8;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.strength-card:nth-child(1) .strength-accent { background: var(--pastel-mint); }
+.strength-card:nth-child(2) .strength-accent { background: var(--pastel-lavender); }
+.strength-card:nth-child(3) .strength-accent { background: var(--pastel-blue); }
+.strength-card:nth-child(4) .strength-accent { background: var(--pastel-yellow); }
+.strength-card:nth-child(5) .strength-accent { background: var(--pastel-pink); }
+.strength-card:nth-child(6) .strength-accent { background: var(--pastel-peach); }
+.strength-card:hover { box-shadow: 0 8px 28px rgba(144,112,204,0.13); transform: translateY(-2px); }
+.strength-accent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+.strength-body { padding: 18px 20px; }
+.strength-label { font-size: 14px; font-weight: 700; color: var(--text-dark); margin-bottom: 6px; }
+.strength-desc { font-size: 12.5px; color: var(--text-mid); line-height: 1.65; }
+
+/* ── MOODBOARD ── */
+.mood-section { background: #fff5fa; }
+.mood-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+.mood-header {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 36px;
+  border-bottom: 1.5px solid #f8e0ee;
+  padding-bottom: 16px;
+}
+.mood-num { font-family: 'Noto Serif KR', serif; font-size: 40px; font-weight: 300; color: rgba(232,122,170,0.18); line-height: 1; }
+.mood-eyebrow { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent-pink); margin-bottom: 4px; }
+.mood-title { font-family: 'Noto Serif KR', serif; font-size: 22px; font-weight: 600; color: var(--text-dark); }
+
+.mood-palette {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.mood-swatch {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1.5px solid rgba(232,122,170,0.15);
+}
+.mood-color {
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+  position: relative;
+}
+.mood-img-area {
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+}
+.mood-img-area img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+.mood-img-placeholder {
+  width: 100%; height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  text-align: center;
+  padding: 8px;
+}
+.mood-label {
+  background: var(--white);
+  padding: 10px 12px;
+}
+.mood-word { font-size: 13px; font-weight: 700; color: var(--text-dark); }
+.mood-sub { font-size: 11px; color: var(--text-light); }
+
+.keyword-section { margin-top: 32px; }
+.keyword-section h3 { font-size: 13px; color: var(--text-dark); font-weight: 500; margin-bottom: 16px; }
+.kw-cloud { display: flex; flex-wrap: wrap; gap: 10px; }
+.kw-tag {
+  padding: 8px 18px;
+  border-radius: 100px;
+  font-weight: 500;
+  cursor: default;
+  transition: transform 0.15s;
+}
+.kw-tag:hover { transform: translateY(-2px); }
+.kw-lg { font-size: 15px; }
+.kw-md { font-size: 13px; }
+.kw-sm { font-size: 11px; padding: 6px 14px; }
+.kw-green-dark { background: var(--pastel-mint); color: #1a6848; border: 1.5px solid #a0e0c8; }
+.kw-green-mid { background: #d4f0e4; color: #2a7a58; border: 1.5px solid #b0dcc8; }
+.kw-gold { background: var(--pastel-yellow); color: #8a6e10; border: 1.5px solid #f0d86a; }
+.kw-sage { background: var(--pastel-lavender); color: #6050b0; border: 1.5px solid #c8b8f0; }
+.kw-cream { background: var(--white); color: var(--text-mid); border: 1.5px solid #f0e4f6; }
+
+/* ── IMAGE GRID ── */
+.img-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 32px;
+}
+.img-slot {
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.6);
+  border: 1.5px dashed rgba(144,112,204,0.3);
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.img-slot img { width: 100%; height: 100%; object-fit: cover; }
+.img-slot-label {
+  text-align: center;
+  color: rgba(144,112,204,0.5);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+.img-slot-label .sl-icon { font-size: 24px; display: block; margin-bottom: 6px; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--pastel-lavender);
+  color: var(--text-mid);
+  text-align: center;
+  padding: 28px 40px;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  border-top: 1.5px solid #e0d4f4;
+}
+footer span { color: var(--accent-lavender); font-weight: 500; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .header-inner { grid-template-columns: 1fr; }
+  .header-visual { height: 200px; }
+  header h1 { font-size: 26px; }
+  .section { padding: 40px 20px; }
+  .mood-palette { grid-template-columns: repeat(3, 1fr); }
+  .mood-palette .mood-swatch:nth-child(4),
+  .mood-palette .mood-swatch:nth-child(5) { display: none; }
+  .img-grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .market-banner-inner { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .strength-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-deco"></div>
+  <div class="header-deco2"></div>
+  <div class="header-inner">
+    <div>
+      <div class="header-eyebrow">Xenohelix · EX HEAL Line · Marketing Research</div>
+      <h1>경쟁사 분석<br>& 자사 포지셔닝<br><em>전략 보고서</em></h1>
+      <p class="header-sub">자연산 엑소좀 스킨케어 · miPDRN 세럼<br>시장 내 경쟁 구도 및 차별화 전략 분석</p>
+      <div class="header-meta">
+        <span class="meta-tag">식물 유래 엑소좀</span>
+        <span class="meta-tag">miPDRN 세럼</span>
+        <span class="meta-tag">K-Beauty 2025–26</span>
+      </div>
+    </div>
+    <div class="header-visual" style="background: linear-gradient(145deg, #fce4ec, #ede8f8);">
+      <img src="exheal.png" alt="EX HEAL 제품" style="width:100%;height:100%;object-fit:contain;padding:20px;">
+    </div>
+  </div>
+</header>
+
+<!-- MARKET BANNER -->
+<div class="market-banner">
+  <div class="market-banner-inner">
+    <div class="market-stat"><span class="num">0.81억 $</span><span class="label">2032 글로벌 엑소좀 시장 전망</span></div>
+    <div class="market-divider"></div>
+    <div class="market-stat"><span class="num">+695%</span><span class="label">PDRN 국내 검색량 증가율 (올영세일)</span></div>
+    <div class="market-divider"></div>
+    <div class="market-stat"><span class="num">2025–26</span><span class="label">성분 뷰티 트렌드 전환점</span></div>
+    <p class="market-note-text">소비자 구매 기준이 브랜드 인지도에서 핵심 성분으로 이동 중 — 과학적 근거와 투명성을 갖춘 브랜드가 차별화 우위를 가져가는 시장</p>
+  </div>
+</div>
+
+<!-- SECTION 1: 경쟁사 조사 -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <div class="section-title-block">
+      <div class="section-eyebrow">Competitive Landscape</div>
+      <div class="section-title">주요 경쟁사 현황</div>
+    </div>
+  </div>
+
+  <!-- 상위 경쟁사 2개 (이미지 있음) -->
+  <div class="comp-grid" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 20px;">
+
+    <!-- 아누아 -->
+    <div class="comp-card">
+      <div class="comp-img" style="background:#e8f5fc; height:200px;">
+        <img src="anua.png" alt="아누아 PDRN 세럼" style="width:100%;height:100%;object-fit:cover;">
+        <span class="comp-img-badge badge-pdrn">PDRN 특화</span>
+      </div>
+      <div class="comp-body">
+        <div class="comp-name">아누아 (Anua)</div>
+        <div class="comp-product-line">PDRN 히알루론산 캡슐 100 세럼, 토너·크림·패드 5종 · 올리브영 올영픽 선정</div>
+        <div class="weak-title">소비자 약점</div>
+        <ul class="weak-list">
+          <li>워터리 제형으로 탄력감 부족 체감</li>
+          <li>여드름성 피부 부적합 후기 다수</li>
+          <li>미백 효과 체감 미비 의견</li>
+          <li>특유 냄새 불호층 존재</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 메디큐브 -->
+    <div class="comp-card">
+      <div class="comp-img" style="background:#fce4f0; height:200px;">
+        <img src="medicube.png" alt="메디큐브 PDRN 세럼" style="width:100%;height:100%;object-fit:cover;">
+        <span class="comp-img-badge badge-both">PDRN + 엑소좀</span>
+      </div>
+      <div class="comp-body">
+        <div class="comp-name">메디큐브 (Medicube)</div>
+        <div class="comp-product-line">PDRN 핑크 원데이 세럼, 99% 연어PDRN×엑소좀 스킨부스터 · APR 계열</div>
+        <div class="weak-title">소비자 약점</div>
+        <ul class="weak-list">
+          <li>핑크 색소 첨가로 성분 신뢰도 의문</li>
+          <li>함량 비공개로 소비자 불신</li>
+          <li>동물 유래(연어) 윤리 이슈</li>
+          <li>4~8주 이상 써야 효과 체감</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 대기업 PDRN 3사 (각 분리) -->
+  <div style="margin-bottom: 12px;">
+    <div style="font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent-mint); font-weight:500; padding: 6px 0 14px;">대기업 계열 식물성 PDRN 라인</div>
+  </div>
+  <div class="comp-grid" style="grid-template-columns: repeat(3, 1fr);">
+
+    <!-- 구달 -->
+    <div class="comp-card">
+      <div class="comp-img" style="background:#e8f5e8; height:140px;">
+        <img src="goodal.png" alt="구달 제품" style="width:100%;height:100%;object-fit:cover;">
+        <span class="comp-img-badge badge-pdrn">식물성 PDRN</span>
+      </div>
+      <div class="comp-body">
+        <div class="comp-name">구달 (Goodal)</div>
+        <div class="comp-product-line">비타C 발효 콤부차 PDRN 라인 · 올리브영 중심</div>
+        <div class="weak-title">소비자 약점</div>
+        <ul class="weak-list">
+          <li>비타C 이미지 강해 PDRN 신뢰도 낮음</li>
+          <li>성분 기술보다 가격 경쟁 의존</li>
+          <li>엑소좀 라인 전무</li>
+          <li>프리미엄 포지셔닝 어려움</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 브링그린 -->
+    <div class="comp-card">
+      <div class="comp-img" style="background:#eaf4e0; height:140px;">
+        <img src="bringgreen.png" alt="브링그린 제품" style="width:100%;height:100%;object-fit:cover;">
+        <span class="comp-img-badge badge-pdrn">식물성 PDRN</span>
+      </div>
+      <div class="comp-body">
+        <div class="comp-name">브링그린 (Bring Green)</div>
+        <div class="comp-product-line">어성초·클로렐라 PDRN 라인 · MZ 저가 포지셔닝</div>
+        <div class="weak-title">소비자 약점</div>
+        <ul class="weak-list">
+          <li>저가 이미지로 고기능성 신뢰도 낮음</li>
+          <li>PDRN 함량·기술력 차별화 부재</li>
+          <li>엑소좀 라인 전무</li>
+          <li>브랜드 인지도 상대적 약세</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 마몽드 -->
+    <div class="comp-card">
+      <div class="comp-img" style="background:#fde8f4; height:140px;">
+        <img src="mamonde.png" alt="마몽드 제품" style="width:100%;height:100%;object-fit:cover;">
+        <span class="comp-img-badge badge-pdrn">식물성 PDRN</span>
+      </div>
+      <div class="comp-body">
+        <div class="comp-name">마몽드 (Mamonde)</div>
+        <div class="comp-product-line">장미 유래 PDRN 라인 · 아모레퍼시픽 계열</div>
+        <div class="weak-title">소비자 약점</div>
+        <ul class="weak-list">
+          <li>중장년 이미지로 MZ 공략 한계</li>
+          <li>대기업 볼륨 마케팅에 기술 차별화 희석</li>
+          <li>엑소좀 라인 전무</li>
+          <li>프리미엄 스킨케어 포지셔닝 어려움</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION 2: 공통 약점 (dark bg) -->
+<div class="gap-section">
+  <div class="gap-inner">
+    <div class="gap-header">
+      <div class="gap-num">02</div>
+      <div>
+        <div class="gap-eyebrow">Market Gaps · Consumer Pain Points</div>
+        <div class="gap-title">경쟁사 공통 약점 · 시장 공백</div>
+      </div>
+    </div>
+    <div class="gap-grid">
+      <div class="gap-card">
+        <div class="gap-card-icon">🔍</div>
+        <div class="gap-card-title">성분 신뢰도 문제</div>
+        <ul>
+          <li>화장품 도포용 제품의 실제 엑소좀 함량 불투명</li>
+          <li>효과가 엑소좀 덕인지 다른 성분 덕인지 불분명</li>
+          <li>과장 마케팅 피로도 증가</li>
+        </ul>
+      </div>
+      <div class="gap-card">
+        <div class="gap-card-icon">⚠️</div>
+        <div class="gap-card-title">동물 유래 거부감</div>
+        <ul>
+          <li>연어·줄기세포 기반 윤리·종교적 거부감</li>
+          <li>동물 유래 엑소좀 규제 이슈 증가 중</li>
+          <li>비동물성 대안 수요 빠르게 확대</li>
+        </ul>
+      </div>
+      <div class="gap-card">
+        <div class="gap-card-icon">💰</div>
+        <div class="gap-card-title">높은 가격 · 낮은 접근성</div>
+        <ul>
+          <li>클리닉급 효과 기대 대비 가격 부담</li>
+          <li>병·의원 채널 중심, 일반 구매 어려움</li>
+          <li>꾸준한 사용 필요 vs. 비용 부담</li>
+        </ul>
+      </div>
+      <div class="gap-card">
+        <div class="gap-card-icon">🌸</div>
+        <div class="gap-card-title">피부 적합성 이슈</div>
+        <ul>
+          <li>여드름·민감 피부 트러블 후기 다수</li>
+          <li>레티놀·AHA/BHA 혼합 사용 시 자극</li>
+          <li>피부 타입별 세분화 제품 부족</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 이미지 슬롯 3개 -->
+    <div class="img-grid-3">
+      <div class="img-slot">
+        <div class="img-slot-label">
+          <span class="sl-icon">📊</span>
+          시장 트렌드 그래프 이미지
+        </div>
+      </div>
+      <div class="img-slot">
+        <div class="img-slot-label">
+          <span class="sl-icon">💬</span>
+          소비자 리뷰 스크린샷
+        </div>
+      </div>
+      <div class="img-slot">
+        <div class="img-slot-label">
+          <span class="sl-icon">📱</span>
+          SNS 버즈 캡처 이미지
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 3: 자사 강점 -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <div class="section-title-block">
+      <div class="section-eyebrow">Our Strengths · Key Differentiation</div>
+      <div class="section-title">EX HEAL · miPDRN 자사 제품 강점</div>
+    </div>
+  </div>
+  <div class="strength-grid">
+    <div class="strength-card">
+      <div class="strength-accent">🌿</div>
+      <div class="strength-body">
+        <div class="strength-label">자연산 · 식물 유래 100%</div>
+        <div class="strength-desc">동물 유래 성분 없이 식물 엑소좀 사용. 윤리적 소비 수요 완전 대응, 비건·종교 무관하게 구매 가능한 유일한 프리미엄 라인</div>
+      </div>
+    </div>
+    <div class="strength-card">
+      <div class="strength-accent">🏫</div>
+      <div class="strength-body">
+        <div class="strength-label">연세대 기술지주 R&D 신뢰도</div>
+        <div class="strength-desc">대학 연구소 기반 기술력으로 성분 투명성 및 임상 데이터 강조 가능. 경쟁사가 흉내 내기 어려운 학술 신뢰 기반</div>
+      </div>
+    </div>
+    <div class="strength-card">
+      <div class="strength-accent">💧</div>
+      <div class="strength-body">
+        <div class="strength-label">miPDRN 독자 식물성 성분</div>
+        <div class="strength-desc">연어 유래 아닌 식물성 PDRN 계열 독점 성분. 연어 알러지·비건·할랄 소비자까지 완전 포용하는 시장 차별화 포인트</div>
+      </div>
+    </div>
+    <div class="strength-card">
+      <div class="strength-accent">📦</div>
+      <div class="strength-body">
+        <div class="strength-label">풀 라인업 시스템 케어</div>
+        <div class="strength-desc">토너→미스트→세럼→스킨부스터 4단계 + miPDRN 세럼 2종. 루틴 완결형 구성으로 업셀링·크로스셀링 용이</div>
+      </div>
+    </div>
+    <div class="strength-card">
+      <div class="strength-accent">🌸</div>
+      <div class="strength-body">
+        <div class="strength-label">민감 피부 친화 포뮬러</div>
+        <div class="strength-desc">자연 유래 저자극 원료. 경쟁사가 해결 못하는 여드름성·민감 피부 공략 가능 — 가장 큰 시장 공백 지점</div>
+      </div>
+    </div>
+    <div class="strength-card">
+      <div class="strength-accent">⚗️</div>
+      <div class="strength-body">
+        <div class="strength-label">이중 재생 메커니즘</div>
+        <div class="strength-desc">엑소좀 나노 경피 전달 + PDRN 세포 재생 이중 작용. "바르는 스킨부스터"로 포지셔닝하는 과학적 근거 확보</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 4: 무드보드 -->
+<div class="mood-section">
+  <div class="mood-inner">
+    <div class="mood-header">
+      <div class="mood-num">04</div>
+      <div>
+        <div class="mood-eyebrow">Keyword Image Map · Moodboard</div>
+        <div class="mood-title">키워드 이미지맵 · 무드보드</div>
+      </div>
+    </div>
+
+    <!-- 무드보드 메인 그리드: 좌(CONCEPT+KEYWORD) / 중(PHOTO STYLE) / 우(COLOR+FONT) -->
+    <div style="display:grid; grid-template-columns: 1fr 1.4fr 1fr; gap: 28px; align-items: start;">
+
+      <!-- ── 좌: CONCEPT + KEYWORD ── -->
+      <div>
+        <div class="mb-label">CONCEPT</div>
+        <div class="mb-concept-title">자연이 만든 과학,<br>피부가 기억하는 회복</div>
+        <p class="mb-concept-desc">
+          "바르는 것만으로 충분하면 안 될까?"<br>
+          병원에 가야만 가능했던 피부 재생을 일상으로 가져오는 EX HEAL. 식물에서 온 엑소좀과 miPDRN이 피부 깊숙이 스며들어 세포 스스로 회복하도록 돕는다.
+        </p>
+        <p class="mb-concept-desc" style="margin-top:10px;">
+          자극 없이 조용하게, 그러나 확실하게.<br>
+          슬로우에이징의 시작은 매일의 루틴에서.
+        </p>
+
+        <div class="mb-label" style="margin-top:28px;">KEYWORD</div>
+
+        <!-- 키워드 버블 맵 -->
+        <div class="mb-kw-map">
+          <div class="mb-kw-bubble mb-kw-center">피부 재생</div>
+          <div class="mb-kw-row">
+            <div class="mb-kw-bubble mb-kw-sm">클린뷰티</div>
+            <div class="mb-kw-bubble mb-kw-sm">식물 유래</div>
+          </div>
+          <div class="mb-kw-row">
+            <div class="mb-kw-bubble mb-kw-sm">슬로우에이징</div>
+            <div class="mb-kw-bubble mb-kw-sm">저자극</div>
+          </div>
+          <div class="mb-kw-row">
+            <div class="mb-kw-bubble mb-kw-sm">물광</div>
+            <div class="mb-kw-bubble mb-kw-sm">장벽 회복</div>
+          </div>
+        </div>
+
+        <div style="margin-top: 18px; display:flex; flex-wrap:wrap; gap:6px;">
+          <span class="mb-tag" style="background:#e0f7ee; color:#2a7a58;">Natural</span>
+          <span class="mb-tag" style="background:#ede8f8; color:#6050b0;">Science</span>
+          <span class="mb-tag" style="background:#e3f0fd; color:#306098;">Hydration</span>
+          <span class="mb-tag" style="background:#fdeee6; color:#b05030;">Renewal</span>
+          <span class="mb-tag" style="background:#fce4ec; color:#b04060;">Gentle</span>
+          <span class="mb-tag" style="background:#fef8e1; color:#8a6e10;">Pure</span>
+        </div>
+
+        <div style="margin-top:16px;">
+          <div style="font-size:11px; color:var(--text-light); line-height:1.8;">
+            식물 유래 엑소좀 / 자연산 엑소좀<br>
+            miPDRN 독자 성분 / 나노 전달체<br>
+            세포 재생 / 피부 장벽 회복<br>
+            루틴 완결형 / 4단계 시스템 케어<br>
+            연세대 R&D / 성분 투명성 / 비동물성
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 중: PHOTO STYLE 이미지 그리드 ── -->
+      <div>
+        <div class="mb-label">PHOTO STYLE</div>
+        <div class="mb-photo-grid">
+          <!-- 행 1 -->
+          <div class="mb-photo-slot" style="grid-row: span 2; background:#e0f7ee;">
+            <div class="mb-photo-placeholder">🌿<br><span>자연·식물<br>이미지</span></div>
+          </div>
+          <div class="mb-photo-slot" style="background:#fce4ec;">
+            <div class="mb-photo-placeholder">✨<br><span>제품 클로즈업</span></div>
+          </div>
+          <div class="mb-photo-slot" style="background:#e3f0fd;">
+            <div class="mb-photo-placeholder">💧<br><span>수분 텍스처</span></div>
+          </div>
+          <!-- 행 2 -->
+          <div class="mb-photo-slot" style="background:#ede8f8;">
+            <div class="mb-photo-placeholder">🔬<br><span>성분 연구</span></div>
+          </div>
+          <div class="mb-photo-slot" style="background:#fef8e1;">
+            <div class="mb-photo-placeholder">🌸<br><span>피부 결</span></div>
+          </div>
+          <!-- 행 3 -->
+          <div class="mb-photo-slot" style="background:#fdeee6;">
+            <div class="mb-photo-placeholder">☀️<br><span>라이프스타일</span></div>
+          </div>
+          <div class="mb-photo-slot" style="grid-column: span 2; background:#e8f8f2;">
+            <div class="mb-photo-placeholder">🌱<br><span>식물 원료 · 자연 배경</span></div>
+          </div>
+          <!-- 행 4 -->
+          <div class="mb-photo-slot" style="background:#fce4ec;">
+            <div class="mb-photo-placeholder">👤<br><span>모델 피부</span></div>
+          </div>
+          <div class="mb-photo-slot" style="background:#e3f0fd;">
+            <div class="mb-photo-placeholder">🧪<br><span>실험·임상</span></div>
+          </div>
+          <div class="mb-photo-slot" style="background:#ede8f8;">
+            <div class="mb-photo-placeholder">💫<br><span>Before/After</span></div>
+          </div>
+        </div>
+        <p style="font-size:10px; color:var(--text-light); margin-top:10px; letter-spacing:0.05em; text-align:center;">
+          자연감 / 투명한 텍스처 / 과학적 / 부드러운 / 파스텔톤 / 일상의
+        </p>
+      </div>
+
+      <!-- ── 우: COLOR + FONT ── -->
+      <div>
+        <div class="mb-label">COLOR</div>
+        <div class="mb-color-row">
+          <div class="mb-color-chip" style="background:#e0f7ee;">
+            <span class="mb-color-hex">#E0F7EE</span>
+          </div>
+          <div class="mb-color-chip" style="background:#fce4ec;">
+            <span class="mb-color-hex">#FCE4EC</span>
+          </div>
+          <div class="mb-color-chip" style="background:#ede8f8;">
+            <span class="mb-color-hex">#EDE8F8</span>
+          </div>
+          <div class="mb-color-chip" style="background:#e3f0fd;">
+            <span class="mb-color-hex">#E3F0FD</span>
+          </div>
+          <div class="mb-color-chip" style="background:#fef8e1;">
+            <span class="mb-color-hex">#FEF8E1</span>
+          </div>
+        </div>
+        <div class="mb-color-row" style="margin-top:8px;">
+          <div class="mb-color-chip" style="background:#52b896;">
+            <span class="mb-color-hex" style="color:#fff;">#52B896</span>
+          </div>
+          <div class="mb-color-chip" style="background:#e87aaa;">
+            <span class="mb-color-hex" style="color:#fff;">#E87AAA</span>
+          </div>
+          <div class="mb-color-chip" style="background:#9070cc;">
+            <span class="mb-color-hex" style="color:#fff;">#9070CC</span>
+          </div>
+          <div class="mb-color-chip" style="background:#60a0e0;">
+            <span class="mb-color-hex" style="color:#fff;">#60A0E0</span>
+          </div>
+          <div class="mb-color-chip" style="background:#e8c84a;">
+            <span class="mb-color-hex" style="color:#fff;">#E8C84A</span>
+          </div>
+        </div>
+        <div style="margin-top:8px; display:flex; gap:8px;">
+          <div class="mb-color-chip" style="background:#2d2d3a; flex:2;">
+            <span class="mb-color-hex" style="color:#fff;">#2D2D3A · 본문</span>
+          </div>
+          <div class="mb-color-chip" style="background:#ffffff; border:1px solid #f0e4f4; flex:1;">
+            <span class="mb-color-hex">#FFF · BG</span>
+          </div>
+        </div>
+
+        <div class="mb-label" style="margin-top:28px;">FONT</div>
+        <div class="mb-font-block">
+          <div class="mb-font-role">브랜드 네임 · 헤드라인</div>
+          <div class="mb-font-display" style="font-family:'Noto Serif KR', serif;">EX HEAL</div>
+          <div style="font-size:10px; color:var(--text-light); margin-top:2px;">Noto Serif KR · 600</div>
+        </div>
+        <div class="mb-font-block">
+          <div class="mb-font-role">서브 타이틀</div>
+          <div class="mb-font-sub">자연산 엑소좀 스킨케어</div>
+          <div style="font-size:10px; color:var(--text-light); margin-top:2px;">Noto Sans KR · 500</div>
+        </div>
+        <div class="mb-font-block">
+          <div class="mb-font-role">본문</div>
+          <div class="mb-font-body">식물 유래 엑소좀이 피부 장벽을 회복합니다.</div>
+          <div style="font-size:10px; color:var(--text-light); margin-top:2px;">Noto Sans KR · 400</div>
+        </div>
+
+        <!-- 폰트 컬러 샘플 -->
+        <div style="margin-top:16px; display:flex; gap:8px;">
+          <div style="background:#52b896; border-radius:10px; padding:10px 0; flex:1; text-align:center; font-size:13px; font-weight:700; color:#fff;">EX HEAL</div>
+          <div style="background:#e87aaa; border-radius:10px; padding:10px 0; flex:1; text-align:center; font-size:13px; font-weight:700; color:#fff;">EX HEAL</div>
+          <div style="background:#ede8f8; border-radius:10px; padding:10px 0; flex:1; text-align:center; font-size:13px; font-weight:700; color:#6050b0;">EX HEAL</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.mb-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-pink);
+  margin-bottom: 12px;
+}
+.mb-concept-title {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.mb-concept-desc {
+  font-size: 12px;
+  color: var(--text-mid);
+  line-height: 1.75;
+}
+.mb-kw-map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+.mb-kw-row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+.mb-kw-bubble {
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 7px 16px;
+  background: rgba(255,255,255,0.8);
+  border: 1.5px solid rgba(144,112,204,0.25);
+  color: var(--text-dark);
+  white-space: nowrap;
+}
+.mb-kw-center {
+  background: var(--accent-lavender);
+  color: #fff;
+  border-color: transparent;
+  font-size: 13px;
+  padding: 9px 22px;
+}
+.mb-kw-sm { font-size: 11px; padding: 5px 12px; }
+.mb-tag {
+  font-size: 11px;
+  padding: 4px 11px;
+  border-radius: 100px;
+  font-weight: 500;
+}
+/* Photo grid */
+.mb-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 80px;
+  gap: 6px;
+}
+.mb-photo-slot {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.mb-photo-slot img { width:100%; height:100%; object-fit:cover; }
+.mb-photo-placeholder {
+  text-align: center;
+  font-size: 18px;
+  color: rgba(80,60,100,0.35);
+  line-height: 1.4;
+}
+.mb-photo-placeholder span { font-size: 9px; display:block; margin-top:2px; }
+/* Color chips */
+.mb-color-row { display:flex; gap:6px; }
+.mb-color-chip {
+  flex: 1;
+  height: 46px;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  padding: 4px 6px;
+}
+.mb-color-hex { font-size: 9px; color: rgba(0,0,0,0.4); letter-spacing:0.02em; }
+/* Font blocks */
+.mb-font-block {
+  background: rgba(255,255,255,0.7);
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  border: 1px solid #f0e4f6;
+}
+.mb-font-role { font-size: 10px; color: var(--accent-lavender); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:4px; }
+.mb-font-display { font-family:'Noto Serif KR', serif; font-size: 22px; font-weight:600; color: var(--text-dark); }
+.mb-font-sub { font-size: 15px; font-weight:500; color: var(--text-dark); }
+.mb-font-body { font-size: 12px; color: var(--text-mid); line-height:1.6; }
+
+@media (max-width: 900px) {
+  .mood-inner > div[style*="grid-template-columns: 1fr 1.4fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>
+
+<footer>
+  <p>Xenohelix · EX HEAL Line &nbsp;|&nbsp; 마케팅팀 내부 자료 &nbsp;|&nbsp; <span>2025–2026 시장 경쟁 분석</span></p>
+</footer>
+
+</body>
+</html>
